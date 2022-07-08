@@ -75,40 +75,28 @@
         // run the webcam image through the image model
 
         async function predict() {
-          var a1=0,a2=0,a3=0;
+         
             // predict can take in an image, video or canvas html element
             const prediction = await model.predict(webcam.canvas);
             console.log(prediction[0].probability);
             if (prediction[0].probability>0.5){
               console.log('student hall');
-              a1+=1;
+             //각 건물 인식 후 작동시킬 코드 적어야 할 영역
 
               }
 
             if (prediction[1].probability>0.5){
               console.log('dawang ai center');
-              a2+=1;
+             //각 건물 인식 후 작동시킬 코드 적어야 할 영역
 
             }
             if (prediction[2].probability>0.5){
               console.log('kwanggato hall');
-              a3+=1;
+             //각 건물 인식 후 작동시킬 코드 적어야 할 영역
 
             }
 
 
-            if (a1===10){
-              document.write('student hall');
-
-            }
-            if (a2===10){
-              document.write('dawang ai center');
-
-            }
-            if (a2===10){
-              document.write('kwanggato hall');
-            
-            }
 
 
 
